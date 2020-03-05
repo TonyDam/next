@@ -3,19 +3,28 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9CB210B73513390A27A4CC52 /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1E6924E9CF0C30EB863E1D /* Pods_NextMovie.framework */; };
+		D9A0E58D23C717F5007BF1DA /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0E58C23C717F5007BF1DA /* Choice.swift */; };
 		D9A8422C23A22167003CDDAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8422B23A22167003CDDAA /* AppDelegate.swift */; };
 		D9A8422E23A22167003CDDAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8422D23A22167003CDDAA /* SceneDelegate.swift */; };
 		D9A8423023A22167003CDDAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8422F23A22167003CDDAA /* ViewController.swift */; };
 		D9A8423323A22167003CDDAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A8423123A22167003CDDAA /* Main.storyboard */; };
 		D9A8423523A22168003CDDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A8423423A22168003CDDAA /* Assets.xcassets */; };
 		D9A8423823A22168003CDDAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A8423623A22168003CDDAA /* LaunchScreen.storyboard */; };
+		D9E24FFB23D9937B0061EBBF /* PosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E24FFA23D9937B0061EBBF /* PosterView.swift */; };
+		D9E24FFD23D99ED40061EBBF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E24FFC23D99ED40061EBBF /* Colors.swift */; };
+		D9E34A4423A2315C004C149C /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E34A4323A2315C004C149C /* MovieService.swift */; };
+		D9E34A4623A23EF8004C149C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E34A4523A23EF8004C149C /* Movie.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6771E7730FB3BB41E9D927ED /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
+		8C1E6924E9CF0C30EB863E1D /* Pods_NextMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9A0E58C23C717F5007BF1DA /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		D9A8422823A22167003CDDAA /* NextMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A8422B23A22167003CDDAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A8422D23A22167003CDDAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,11 @@
 		D9A8423423A22168003CDDAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9A8423723A22168003CDDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9A8423923A22168003CDDAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9E24FFA23D9937B0061EBBF /* PosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterView.swift; sourceTree = "<group>"; };
+		D9E24FFC23D99ED40061EBBF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		D9E34A4323A2315C004C149C /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		D9E34A4523A23EF8004C149C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		F5A3BFDF024D5299750D2647 /* Pods-NextMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.debug.xcconfig"; path = "Target Support Files/Pods-NextMovie/Pods-NextMovie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB210B73513390A27A4CC52 /* Pods_NextMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54336C5559B3BDB041BEB687 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8C1E6924E9CF0C30EB863E1D /* Pods_NextMovie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D9A8421F23A22166003CDDAA = {
 			isa = PBXGroup;
 			children = (
 				D9A8422A23A22167003CDDAA /* NextMovie */,
 				D9A8422923A22167003CDDAA /* Products */,
+				F83C86D0EDF28A24B0078A56 /* Pods */,
+				54336C5559B3BDB041BEB687 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +81,61 @@
 		D9A8422A23A22167003CDDAA /* NextMovie */ = {
 			isa = PBXGroup;
 			children = (
+				D9E34A3F23A22E3D004C149C /* View */,
+				D9E34A4123A22E65004C149C /* Model */,
+				D9E34A4023A22E52004C149C /* SupportingFiles */,
+				D9E34A4223A22E73004C149C /* Controller */,
+			);
+			path = NextMovie;
+			sourceTree = "<group>";
+		};
+		D9E34A3F23A22E3D004C149C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D9A8423123A22167003CDDAA /* Main.storyboard */,
+				D9E24FFA23D9937B0061EBBF /* PosterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D9E34A4023A22E52004C149C /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
 				D9A8422B23A22167003CDDAA /* AppDelegate.swift */,
 				D9A8422D23A22167003CDDAA /* SceneDelegate.swift */,
-				D9A8422F23A22167003CDDAA /* ViewController.swift */,
-				D9A8423123A22167003CDDAA /* Main.storyboard */,
 				D9A8423423A22168003CDDAA /* Assets.xcassets */,
 				D9A8423623A22168003CDDAA /* LaunchScreen.storyboard */,
 				D9A8423923A22168003CDDAA /* Info.plist */,
+				D9E24FFC23D99ED40061EBBF /* Colors.swift */,
 			);
-			path = NextMovie;
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		D9E34A4123A22E65004C149C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D9E34A4323A2315C004C149C /* MovieService.swift */,
+				D9E34A4523A23EF8004C149C /* Movie.swift */,
+				D9A0E58C23C717F5007BF1DA /* Choice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D9E34A4223A22E73004C149C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9A8422F23A22167003CDDAA /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F83C86D0EDF28A24B0078A56 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5A3BFDF024D5299750D2647 /* Pods-NextMovie.debug.xcconfig */,
+				6771E7730FB3BB41E9D927ED /* Pods-NextMovie.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9A8423C23A22168003CDDAA /* Build configuration list for PBXNativeTarget "NextMovie" */;
 			buildPhases = (
+				18C344EDC5B088B14C7F966F /* [CP] Check Pods Manifest.lock */,
 				D9A8422423A22167003CDDAA /* Sources */,
 				D9A8422523A22167003CDDAA /* Frameworks */,
 				D9A8422623A22167003CDDAA /* Resources */,
+				BAEAB825FA39F02D8D9EB756 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,14 +206,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18C344EDC5B088B14C7F966F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NextMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAEAB825FA39F02D8D9EB756 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NextMovie/Pods-NextMovie-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NextMovie/Pods-NextMovie-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NextMovie/Pods-NextMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9A8422423A22167003CDDAA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9A0E58D23C717F5007BF1DA /* Choice.swift in Sources */,
+				D9E24FFD23D99ED40061EBBF /* Colors.swift in Sources */,
 				D9A8423023A22167003CDDAA /* ViewController.swift in Sources */,
 				D9A8422C23A22167003CDDAA /* AppDelegate.swift in Sources */,
+				D9E34A4423A2315C004C149C /* MovieService.swift in Sources */,
 				D9A8422E23A22167003CDDAA /* SceneDelegate.swift in Sources */,
+				D9E24FFB23D9937B0061EBBF /* PosterView.swift in Sources */,
+				D9E34A4623A23EF8004C149C /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +390,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -282,14 +402,16 @@
 		};
 		D9A8423D23A22168003CDDAA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5A3BFDF024D5299750D2647 /* Pods-NextMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NextMovie/Info.plist;
+				INFOPLIST_FILE = NextMovie/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.tonydam.NextMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -299,14 +421,16 @@
 		};
 		D9A8423E23A22168003CDDAA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6771E7730FB3BB41E9D927ED /* Pods-NextMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = NextMovie/Info.plist;
+				INFOPLIST_FILE = NextMovie/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fr.tonydam.NextMovie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
