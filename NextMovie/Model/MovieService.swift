@@ -37,7 +37,6 @@ class MovieService {
     
     func getDiscoverMovies(completion: @escaping (MovieError?, [Movie]?) -> Void) {
         let task = URLSession.shared.dataTask(with: discoverUrl) { (data, response, error) in
-            
 //            traiter error
             if let error = error as? URLError {
                 if error.code == URLError.Code.notConnectedToInternet {
@@ -70,24 +69,26 @@ class MovieService {
             let results = JSON(data)["results"]
             
 //            Créer un tableau vide
-            var movies = [(title: String, posterPath: String, releaseDate: String, releaseYear: String, id: String, description: String )]()
+            var movies = [(title: String, posterPath: String, releaseDate: String, releaseYear: String, id: String, description: String, genreIds: [Int] )]()
             
 //            Remplir le tableau // Verifier si aucune propriété n'est égale à null - todo
             for movie in results.arrayValue {
+                
                 let title = movie["title"].stringValue
                 let posterPath = movie["poster_path"].stringValue
                 let id = movie["id"].stringValue
                 let description = movie["description"].stringValue
                 let releaseDate = movie["release_date"].stringValue
                 let releaseYear = "(\(releaseDate.split(separator: "-")[0]))" // 2019-01-17 deviens ["2019", "01", "17"], on veut le numéro 0 de l'Array donc c'est 2019
+                let genreIds: [Int] = movie["genre_ids"].arrayValue.map {$0.intValue}
                 
-                movies.append((title: title, posterPath: posterPath, releaseDate: releaseDate, id: id, description: description, releaseYear: releaseYear))
+                movies.append((title: title, posterPath: posterPath, releaseDate: releaseDate, id: id, description: description, releaseYear: releaseYear, genreIds: genreIds))
                 
             }
+            print(movies)
 //            Pour chaque film de movies, récupérer le poster puis créer une instance de Movie
 //            Cela se fera dans une boucle for movie in movies {...}
             var discoverMovies = [Movie]()
-            
 //            Créer un groupe de tâche (GCP) pour gérer l'asynchrone sur SWIFT
             let group = DispatchGroup()
             for movie in movies {
@@ -101,7 +102,7 @@ class MovieService {
                         return
                     }
 //                Créer l'instance de movie que j'appel discoverMovies avec le poster, le title etc.
-                    let discoverMovie = Movie(title: movie.title, poster: poster, releaseDate: movie.releaseYear, isLiked: nil, id: movie.releaseDate, description: movie.id, releaseYear: movie.description)
+                    let discoverMovie = Movie(title: movie.title, poster: poster, releaseDate: movie.releaseYear, isLiked: nil, id: movie.releaseDate, description: movie.id, releaseYear: movie.description, genreIds: movie.genreIds)
 //                Ajouter ce movie à un tableau discoverMovies
                     discoverMovies.append(discoverMovie)
                     group.leave()
@@ -110,6 +111,65 @@ class MovieService {
             
             group.notify(queue: DispatchQueue.main) {
                 completion(nil, discoverMovies)
+            }
+        }
+        task.resume()
+    }
+    func getMoviesWithGenre(genreId: Int, completion:  @escaping (MovieError?, [Movie]?) -> Void) {
+        let genreUrl = URL(string: "\(movieApi)/discover/movie?api_key=\(apiKey)&with_genres=\(genreId)&region=FR")!
+        let task = URLSession.shared.dataTask(with: genreUrl) { (data, response, error) in
+            DispatchQueue.main.async {
+
+                if let error = error as? URLError {
+                    if error.code == URLError.Code.notConnectedToInternet {
+                        print("ERROR BECAUSE NOT CONNECTED TO INTERNET")
+                        completion(MovieError.connection, nil)
+                        return
+                    } else {
+                        print("UNDEFINED PICTURE ERROR")
+                        completion(MovieError.undefined, nil)
+                        return
+                    }
+                }
+                guard let response = response as? HTTPURLResponse else {
+                    print("ERROR WITH THE RESPONSE")
+                    completion(MovieError.response, nil)
+                    return
+                }
+                guard response.statusCode == 200 else {
+                    print("ERROR WITH THE STATUS CODE", response.statusCode)
+                    completion(MovieError.statusCode, nil)
+                    return
+                }
+                
+                guard let data = data else {
+                    print("ERROR WITH THE DATA")
+                    completion(MovieError.data, nil)
+                    return
+                }
+                let results = JSON(data)["results"]
+                var movies = [Movie]()
+                for movie in results.arrayValue {
+                    if movie["title"] == JSON.null
+                        || movie["poster_path"] == JSON.null
+                        || movie["id"] == JSON.null
+                        || movie["description"] == JSON.null
+                        || movie["release_date"] == JSON.null
+                        || movie["genre_ids"] == JSON.null
+                    {   print("JSON NULL")
+                        continue }
+
+                    let title = movie["title"].stringValue
+                    let posterPath = movie["poster_path"].stringValue
+                    let id = movie["id"].stringValue
+                    let description = movie["description"].stringValue
+                    let releaseDate = movie["release_date"].stringValue
+                    let releaseYear = "(\(releaseDate.split(separator: "-")[0]))"
+                    let genreIds: [Int] = movie["genre_ids"].arrayValue.map {$0.intValue}
+                    
+                    movies.append(Movie(title: title, posterPath: posterPath, releaseYear: releaseYear, id: id, description: description, genreIds: genreIds))
+                }
+                completion(nil, movies)
             }
         }
         task.resume()

@@ -20,8 +20,9 @@ class Movie {
 //    var releaseYear: String {
 //        return poster.
 //    }
+    var genreIds: [Int]
     
-    init(title: String, poster: Data, releaseDate: String, isLiked: Bool?, id: String, description: String, releaseYear: String ) {
+    init(title: String, poster: Data, releaseDate: String, isLiked: Bool?, id: String, description: String, releaseYear: String, genreIds: [Int]) {
         self.title = title
         self.poster = poster
         self.releaseDate = releaseDate
@@ -29,6 +30,7 @@ class Movie {
         self.id = id
         self.description = description
         self.releaseYear = releaseYear
+        self.genreIds = genreIds
     }
     
     func setLike(with userChoice: Bool) {

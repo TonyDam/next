@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		9CB210B73513390A27A4CC52 /* Pods_NextMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C1E6924E9CF0C30EB863E1D /* Pods_NextMovie.framework */; };
+		D93797F72410F8B90020A862 /* ChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D93797F62410F8B90020A862 /* ChoiceViewController.swift */; };
 		D9A0E58D23C717F5007BF1DA /* Choice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A0E58C23C717F5007BF1DA /* Choice.swift */; };
 		D9A8422C23A22167003CDDAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8422B23A22167003CDDAA /* AppDelegate.swift */; };
 		D9A8422E23A22167003CDDAA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8422D23A22167003CDDAA /* SceneDelegate.swift */; };
-		D9A8423023A22167003CDDAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A8422F23A22167003CDDAA /* ViewController.swift */; };
 		D9A8423323A22167003CDDAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A8423123A22167003CDDAA /* Main.storyboard */; };
 		D9A8423523A22168003CDDAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9A8423423A22168003CDDAA /* Assets.xcassets */; };
 		D9A8423823A22168003CDDAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9A8423623A22168003CDDAA /* LaunchScreen.storyboard */; };
@@ -24,11 +24,11 @@
 /* Begin PBXFileReference section */
 		6771E7730FB3BB41E9D927ED /* Pods-NextMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NextMovie.release.xcconfig"; path = "Target Support Files/Pods-NextMovie/Pods-NextMovie.release.xcconfig"; sourceTree = "<group>"; };
 		8C1E6924E9CF0C30EB863E1D /* Pods_NextMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NextMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D93797F62410F8B90020A862 /* ChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceViewController.swift; sourceTree = "<group>"; };
 		D9A0E58C23C717F5007BF1DA /* Choice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Choice.swift; sourceTree = "<group>"; };
 		D9A8422823A22167003CDDAA /* NextMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NextMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9A8422B23A22167003CDDAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9A8422D23A22167003CDDAA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D9A8422F23A22167003CDDAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D9A8423223A22167003CDDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D9A8423423A22168003CDDAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9A8423723A22168003CDDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,10 +81,10 @@
 		D9A8422A23A22167003CDDAA /* NextMovie */ = {
 			isa = PBXGroup;
 			children = (
-				D9E34A3F23A22E3D004C149C /* View */,
 				D9E34A4123A22E65004C149C /* Model */,
-				D9E34A4023A22E52004C149C /* SupportingFiles */,
+				D9E34A3F23A22E3D004C149C /* View */,
 				D9E34A4223A22E73004C149C /* Controller */,
+				D9E34A4023A22E52004C149C /* SupportingFiles */,
 			);
 			path = NextMovie;
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 		D9E34A4223A22E73004C149C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D9A8422F23A22167003CDDAA /* ViewController.swift */,
+				D93797F62410F8B90020A862 /* ChoiceViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,11 +255,11 @@
 			files = (
 				D9A0E58D23C717F5007BF1DA /* Choice.swift in Sources */,
 				D9E24FFD23D99ED40061EBBF /* Colors.swift in Sources */,
-				D9A8423023A22167003CDDAA /* ViewController.swift in Sources */,
 				D9A8422C23A22167003CDDAA /* AppDelegate.swift in Sources */,
 				D9E34A4423A2315C004C149C /* MovieService.swift in Sources */,
 				D9A8422E23A22167003CDDAA /* SceneDelegate.swift in Sources */,
 				D9E24FFB23D9937B0061EBBF /* PosterView.swift in Sources */,
+				D93797F72410F8B90020A862 /* ChoiceViewController.swift in Sources */,
 				D9E34A4623A23EF8004C149C /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
